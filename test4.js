@@ -35,3 +35,21 @@ var Test;
 let test1 = Test.A;
 let nameA = Test[test1]; // A
 let t = 0 /* ConstEnum.A */;
+var Dice;
+(function (Dice) {
+    Dice[Dice["One"] = 1] = "One";
+    Dice[Dice["Two"] = 2] = "Two";
+    Dice[Dice["Tree"] = 3] = "Tree";
+})(Dice || (Dice = {}));
+function ruDice(dice) {
+    switch (dice) {
+        case Dice.One:
+            return 'один';
+        case Dice.Two:
+            return 'два';
+        case Dice.Tree:
+            return 'три';
+        default:
+            const a = dice;
+    }
+}
